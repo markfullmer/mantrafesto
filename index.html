@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="An attempt at mapping a personal hierarchy of guiding principles">
+  <meta property="og:url" content="https://mantrafesto.markfullmer.com/" />
+  <meta property="og:site_name"
+    content="Mantrafesto, by Mark Fullmer" />
+  <title>Mantrafesto</title>
+  <style>
+.heading {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+nav {
+  border-bottom: 1px solid #3d3d3d;
+}
+figure#tree {
+  float:left;
+  width:-webkit-fill-available;
+  overflow-y: auto;
+  border: 1px solid #bbb;
+  padding: 1rem;
+}
+  </style>
+</head>
+
+<body>
+  <script src='./d3.v5.min.js'></script>
+  <script src='./d3.dependencyTree.js'></script>
+  <script src='./data.js'></script>
+<nav class="container">
+  <h1 class="heading">Mantrafesto</h1>
+</nav>
+<figure id="tree"></figure>
+<script>
+  dependencyTree(data, "figure#tree", true);
+</script>
